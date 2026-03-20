@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="shortcut icon" href=" ./favicon.ico" />
+  <link rel="stylesheet" href="./iconfont/iconfont.css">
+
+  <style>
+    /* header区域 */
+
+    /* 默认样式：适用于手机 (0px 及以上) */
+    .header {
+      height: 8vh;
+      width: 100%;
+      position: fixed;
+      background-color: #126fe000;
+      z-index: 100;
+      transition: all 1s;
+    }
+
+    .header .wrapper {
+      display: block;
+    }
+
+    .header h1 {
+      margin-left: 3vw;
+      height: 100%;
+    }
+
+    .header h1 a {
+      position: relative;
+      height: 100%;
+      display: block;
+    }
+
+    .header h1 a img {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 25vh;
+      height: auto;
+      transition: all 1s;
+      object-fit: contain;
+    }
+
+    /* header宽屏菜单 */
+    .headermenu {
+      /* z-index: 110; */
+      display: none;
+      align-items: center;
+      height: 100%;
+      position: absolute;
+      right: 15vh;
+    }
+
+    .headermenu li {
+      padding: 1vh 1.5vh 0vh 1.5vh;
+      text-align: center;
+      border-left: 1px solid #9c9c9c79;
+    }
+
+    .headermenu li a {
+      color: #ffffff;
+      font-style: 1rem;
+      font-weight: 400;
+    }
+
+    .headermenu li a .headermenuen {
+      color: #ffffff;
+      font-size: 0.8rem;
+      transform: translateY(-35%);
+      font-weight: 400;
+    }
+
+    /* header右侧按钮 */
+    .menubt {
+      z-index: 200;
+      position: fixed;
+      top: 1vh;
+      right: 1vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6vh;
+      height: 6vh;
+      border: 0.2vw solid #ff0000;
+      cursor: pointer;
+    }
+
+    .menubt .iconfont {
+      font-size: 5vh;
+      color: #ff0000;
+    }
+
+    /* @media (min-width: 1100px) {
+  .headermenu {
+    display: flex;
+  }
+} */
+
+
+    /* 打开的菜单 */
+    .menuopen {
+      position: fixed;
+      z-index: 150;
+      background-image: url(../images/menubgi.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100vh;
+      opacity: 0;
+      top: -100%;
+      transition: all 0.8s;
+    }
+
+
+    /* 打开后的右侧按钮 */
+    .menubtopen {
+      position: absolute;
+      top: 1vh;
+      right: 1vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 6vh;
+      height: 6vh;
+      border: 0.2vw solid #535353;
+      cursor: pointer;
+    }
+
+    .menubtopen .icon-shanchu {
+      font-size: 5vh;
+      color: #535353;
+    }
+
+    /* 菜单内容 */
+    .menuopen ul {
+      margin-top: 20vw;
+    }
+
+    .menuopen ul li {
+      display: flex;
+      align-items: center;
+      padding: 2vw 3vw;
+      border-bottom: 0.2vw solid #0a3d807e;
+    }
+
+    .menuopen ul li a {
+      font-weight: 750;
+      font-size: 1rem;
+      color: #0A3D80;
+    }
+
+    .menuopen ul li .menuopenen {
+      margin-left: 2vw;
+      font-weight: 400;
+      font-size: 0.8rem;
+      color: #0E56B3;
+    }
+
+    .menuopen .contactus {
+      margin-top: 15vw;
+      margin-left: 2vw;
+      font-size: 0.9rem;
+      color: rgba(36, 36, 36, 0.671);
+      line-height: 3.5vw;
+    }
+
+    .menuopen .contactus .contactusnow {
+      font-size: 1.2rem;
+    }
+
+    .menuopen .contactus .titlestrong {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="header">
+    <div class="wrapper">
+      <!-- logo -->
+      <h1>
+        <a href="#"><img src="./images/logoheng.png" class="upper" alt=""></a>
+      </h1>
+      <!-- 右侧菜单按钮 -->
+      <div class="menubt">
+        <span class="iconfont icon-liebiao"></span>
+      </div>
+    </div>
+  </div>
+</body>
+<script>
+  //进入大菜单
+  const menuBt = document.querySelector('.menubt')
+
+
+  menuBt.addEventListener('click', () => {
+    console.log('我被点了');
+
+  })
+</script>
+
+</html>

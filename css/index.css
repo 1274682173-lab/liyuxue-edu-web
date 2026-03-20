@@ -1,0 +1,392 @@
+/* banner */
+.banner {
+  position: relative;
+  width: 100%;
+  /* 视口宽度 */
+  height: 95vh;
+  overflow: hidden;
+  position: relative;
+  background-color: #eee;
+  /* 加载中的占位色 */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 轮播列表 */
+.banner ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  list-style: none;
+  transition: transform 0.3s ease;
+  /* 滑动翻页过渡 */
+}
+
+.banner ul li {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.banner ul li .tittle {
+  z-index: 3;
+  display: inline-block;
+  position: absolute;
+  left: 20%;
+  bottom: 60%;
+  font-size: 3rem;
+  /* 让字间距生效 */
+  opacity: 0;
+  letter-spacing: 20vw;
+  /* 初始字间距大 */
+  transform: translateX(50vw);
+  /* 从右侧开始 */
+  animation: textReveal 4s ease infinite;
+  color: #ffffff;
+}
+
+.banner ul li .innertext {
+  display: inline-block;
+  font-size: 1.5rem;
+  width: 50vw;
+  z-index: 3;
+  position: absolute;
+  left: 40%;
+  bottom: 33vh;
+  /* 让字间距生效 */
+  opacity: 0;
+  letter-spacing: 20vw;
+  /* 初始字间距大 */
+  transform: translateX(50vw);
+  /* 从右侧开始 */
+  animation: textReveal 4s ease infinite;
+  color: #ffffff;
+}
+
+.banner ul li .innertextEng {
+  display: inline-block;
+  font-size: 1rem;
+  width: 50vw;
+  z-index: 3;
+  position: absolute;
+  left: 40%;
+  bottom: 24vh;
+  /* 让字间距生效 */
+  opacity: 0;
+  letter-spacing: 20vw;
+  /* 初始字间距大 */
+  transform: translateX(50vw);
+  /* 从右侧开始 */
+  animation: textReveal 4s ease infinite;
+  color: #ffffff;
+}
+
+
+/* 定义动画 */
+@keyframes textReveal {
+  0% {
+    opacity: 0;
+    letter-spacing: 20px;
+    transform: translateX(50px);
+  }
+
+  50% {
+    opacity: 1;
+    letter-spacing: normal;
+    /* 恢复正常字间距 */
+    transform: translateX(0);
+    /* 回到原位 */
+  }
+
+  100% {
+    opacity: 1;
+    letter-spacing: normal;
+    /* 恢复正常字间距 */
+    transform: translateX(0);
+    /* 回到原位 */
+  }
+}
+
+/* 链接填满整个li，作为背景图容器 */
+.banner ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  /* 去除下划线 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 背景图 */
+  -webkit-mask: linear-gradient(to bottom,
+      black 0%,
+      /* 顶部完全不透明 */
+      black 10%,
+      /* 保持不透明到10% */
+      black 90%,
+      /* 保持不透明到90% */
+      transparent 100%
+      /* 底部完全透明 */
+    ),
+    linear-gradient(to right,
+      transparent 0%,
+      /* 左侧边缘完全透明 */
+      black 10%,
+      /* 10%位置开始完全不透明 */
+      black 90%,
+      /* 保持不透明到90% */
+      transparent 100%
+      /* 右侧边缘完全透明 */
+    );
+  mask: linear-gradient(to bottom,
+      black 0%,
+      black 10%,
+      black 90%,
+      transparent 100%),
+    linear-gradient(to right,
+      transparent 0%,
+      black 10%,
+      black 90%,
+      transparent 100%);
+  -webkit-mask-composite: intersect;
+  /* 对于WebKit浏览器，使用相交合成 */
+  mask-composite: intersect;
+  /* 标准属性，两个遮罩区域取交集 */
+}
+
+
+
+/* 四个链接分别应用背景图 —— 按顺序 ../uploads/banner1.jpg 至 banner4.jpg */
+.banner ul li:nth-child(1) a {
+  background-image: url('../uploads/banner1.jpg');
+}
+
+.banner ul li:nth-child(2) a {
+  background-image: url('../uploads/banner2.jpg');
+}
+
+.banner ul li:nth-child(3) a {
+  background-image: url('../uploads/banner3.jpg');
+}
+
+.banner ul li:nth-child(4) a {
+  background-image: url('../uploads/banner4.jpg');
+}
+
+.banner ul li:nth-child(5) a {
+  background-image: url('../uploads/banner1.jpg');
+}
+
+.origin {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.origin::after {
+  display: block;
+  position: absolute;
+  content: '';
+  width: 59vh;
+  height: 56vh;
+  background-image: url(../images/shu.png);
+  /* background-position: -0vw -45vw; */
+  top: -22vh;
+  background-size: 105%;
+  background-repeat: no-repeat;
+}
+
+.origin .wrapper {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.origin .wrapper .box {
+  position: relative;
+  margin-top: 15vw;
+  width: 80vw;
+  height: 55vw;
+  opacity: 0;
+  transition: all 1s;
+}
+
+
+
+.origin .wrapper .box img {
+  position: absolute;
+  z-index: 2;
+  width: 70vw;
+  height: 45vw;
+  object-fit: cover;
+  top: 0%;
+  right: 0%;
+}
+
+
+
+.origin .wrapper .boxbd {
+  position: absolute;
+  z-index: 3;
+  top: 3vw;
+  right: 3vw;
+  border: 0.05vw solid #bbb7b7;
+  width: 65vw;
+  height: 39vw;
+}
+
+.origin .wrapper .boxview {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  justify-content: space-between;
+  bottom: 8%;
+  left: 0%;
+  color: rgb(224, 224, 224);
+  z-index: 14;
+  width: 40vw;
+  height: 10vw;
+  background-color: #292929;
+}
+
+.origin .wrapper .boxview span {
+  margin: 0 5vw;
+  font-size: 3vw;
+}
+
+.origin .wrapper .boxview .icon-xiangyou {
+  font-size: 1.8rem;
+}
+
+.origintext {
+  z-index: 2;
+  position: relative;
+  margin: 10vw 0;
+  padding: 0 5vw;
+  flex-direction: column;
+  width: 100%;
+  transition: all 1s;
+}
+
+
+.origintext .mainnum {
+  z-index: 1;
+  position: absolute;
+  right: 10vw;
+  top: -15vw;
+  font-size: 12rem;
+  color: #29292918;
+}
+
+.origintext h2 {
+  font-size: 2rem;
+  text-align: left;
+  color: #565656;
+
+}
+
+.origintext .origintextbr {
+  width: 20vw;
+  height: 3vw;
+  border-bottom: 0.05vw solid #000;
+  margin-bottom: 3vw;
+}
+
+.origintext .origintextinfo {
+  font-size: 1rem;
+  color: #5f5f5f
+}
+
+.origintext .origintextinfoen {
+  margin-top: 1vw;
+  font-size: 0.9rem;
+  color: #5f5f5f
+}
+
+
+
+@media (min-width: 850px) {
+  .origin .wrapper {
+    height: 88vw;
+  }
+
+  .origin .wrapper .box img {
+    width: 50vw;
+    right: -9%;
+  }
+
+  .origin .wrapper .boxbd {
+    top: 8vw;
+    right: -18vw;
+  }
+
+  .origin .wrapper .boxview {
+    left: 67%;
+    bottom: 22%;
+    width: 36vw;
+    height: 7vw;
+  }
+
+  .origintext {
+    margin: -17vw 0;
+  }
+
+  .origintext .mainnum {
+    left: 2vw;
+    top: -49vw;
+    font-size: 23rem;
+  }
+}
+
+@media (min-width: 1100px) {
+  .origin .wrapper {
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+
+  .origin .wrapper .box img {
+    width: 40vw;
+    right: 5vw;
+  }
+
+  .origintext {
+    align-self: flex-end;
+    padding: 0 5vw;
+    margin-bottom: 40vw;
+    width: 70%;
+  }
+
+  .origintext h2 {
+    font-size: 3rem;
+  }
+
+  .origintext .origintextinfo {
+    font-size: 1.2rem;
+  }
+
+  .origintext .origintextinfoen {
+    font-size: 1rem;
+  }
+
+  .origin .wrapper .boxview {
+    left: 6%;
+  }
+
+  .origin .wrapper .boxbd {
+    top: 7vw;
+    right: -30vw;
+  }
+
+  .origintext .mainnum {
+    left: 0vw;
+    top: -20vw;
+    font-size: 39rem;
+  }
+
+  .origin .wrapper .box {
+    margin-top: -20vw;
+  }
+}

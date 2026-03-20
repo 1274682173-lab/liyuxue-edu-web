@@ -1,0 +1,74 @@
+/* 去除常见标签默认的 margin 和 padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* rem媒体查询 - 根元素字体大小 */
+html {
+  font-size: 16px;
+  background-color: #f0f0f0;
+  /* 手机基准 */
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 17px;
+    /* 平板稍微大一点 */
+  }
+}
+
+@media (min-width: 1024px) {
+  html {
+    font-size: 18px;
+    /* 电脑标准大小 */
+  }
+}
+
+/* 网页通用样式 */
+body {
+  font: 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  color: #333;
+}
+
+/* 去除列表默认样式 */
+ul,
+ol {
+  list-style: none;
+}
+
+/* 去除默认的倾斜效果 */
+em,
+i {
+  font-style: normal;
+}
+
+/* 去除a标签默认下划线，并设置默认文字颜色 */
+a {
+  text-decoration: none;
+  color: #333;
+}
+
+/* 设置img的垂直对齐方式为居中对齐，去除img默认下间隙 */
+img {
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+}
+
+/* 去除input默认样式 */
+input {
+  border: none;
+  outline: none;
+  color: #333;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
