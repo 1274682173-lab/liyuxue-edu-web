@@ -125,7 +125,6 @@ menuBt.addEventListener('click', () => {
   }
 
   menuOpen.style.opacity = '1';
-  menuOpen.style.display = 'block';
   menuOpen.style.top = '0%';
 
   // 0.8秒后解锁
@@ -150,7 +149,6 @@ menuClose.addEventListener('click', () => {
   menuOpen.style.top = '-100%';
 
   closeMenuTimecount = setTimeout(() => {
-    menuOpen.style.display = 'none';
     closeMenuTimecount = null;
   }, 500);
 
@@ -187,7 +185,7 @@ fixdIcon.addEventListener('mouseout', e => {
     }
   } else {
     if (e.target.tagName === 'SPAN') {
-      fixdQrcodeBoxImg[e.target.dataset.index - 1].style.transform = 'translateX(100%)'// 复原
+      fixdQrcodeBoxImg[e.target.dataset.index - 1].style.transform = 'translateX(102%)'// 复原
     }
   }
 })

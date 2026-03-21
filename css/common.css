@@ -141,7 +141,7 @@
 
 /* 菜单内容 */
 .menuopen ul.menuopen1stul {
-  margin-top: 20vw;
+  margin-top: 150px;
 }
 
 .menuopen ul.menuopen1stul li.n1stli {
@@ -173,7 +173,7 @@
   }
 
   .menuopen ul.menuopen1stul {
-    margin-top: 5vw;
+    margin-top: 150px;
   }
 
   .menuopen ul.menuopen1stul li.n1stli {
@@ -208,6 +208,9 @@
 /* 宽屏幕大菜单 */
 @media (min-width: 1300px) {
   .menuopen .menuopen1stul {
+    position: relative;
+
+    margin-top: 150px;
     display: flex;
     height: 100%;
     width: 100%;
@@ -215,10 +218,6 @@
     justify-content: space-between;
   }
 
-  .menuopen ul.menuopen1stul {
-    position: relative;
-    margin-top: 10vw;
-  }
 
   .menuopen ul.menuopen1stul li.n1stli {
     display: flex;
@@ -391,7 +390,7 @@
   .qrcodebox img {
     position: absolute;
     transform: translateY(0%);
-    transform: translateX(100%);
+    transform: translateX(102%);
     transition: all 1s;
   }
 }
