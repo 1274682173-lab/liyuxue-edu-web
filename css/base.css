@@ -5,7 +5,44 @@
   box-sizing: border-box;
 }
 
+/* 得意黑 */
+@font-face {
+  font-family: 'Smiley Sans';
+  src: url('../fonts/SmileySans-Oblique.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 思源黑体 - 常规（正文） */
+@font-face {
+  font-family: 'Source Han Sans SC';
+  src: url('../fonts/SourceHanSans-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 思源黑体 - 中等（小标题） */
+@font-face {
+  font-family: 'Source Han Sans SC';
+  src: url('../fonts/SourceHanSans-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* 思源黑体 - 粗体（大标题） */
+@font-face {
+  font-family: 'Source Han Sans SC';
+  src: url('../fonts/SourceHanSans-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* rem媒体查询 - 根元素字体大小 */
+
 html {
   font-size: 16px;
   background-color: #f0f0f0;
@@ -26,10 +63,31 @@ html {
   }
 }
 
-/* 网页通用样式 */
-body {
-  font: 1rem/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  color: #333;
+/* ========== 4. 标题基础样式（你原有的） ========== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+/* ========== 5. 标题使用得意黑（装饰） ========== */
+h1,
+h2,
+h3 {
+  font-family: 'Smiley Sans', 'Source Han Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.02em;
+}
+
+/* h4-h6 使用思源黑体 Medium（清晰） */
+h4,
+h5,
+h6 {
+  font-family: 'Source Han Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  font-weight: 500;
 }
 
 /* 去除列表默认样式 */
@@ -62,13 +120,4 @@ input {
   border: none;
   outline: none;
   color: #333;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 400;
 }

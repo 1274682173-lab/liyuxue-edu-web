@@ -31,6 +31,7 @@
 .banner ul li .tittle {
   z-index: 3;
   display: inline-block;
+  font-family: 'Smiley Sans', 'Source Han Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   position: absolute;
   left: 20%;
   bottom: 60%;
@@ -47,6 +48,7 @@
 
 .banner ul li .innertext {
   display: inline-block;
+  font-family: 'Smiley Sans', 'Source Han Sans SC', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   font-size: 1.5rem;
   width: 50vw;
   z-index: 3;
@@ -468,10 +470,13 @@
   margin: 0 auto;
 }
 
+
+
 /* 领取好礼立于学大板块 */
 .sendGoods .wrapper .leftbox {
-  display: flex;
   position: relative;
+  display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
   width: 90vw;
@@ -494,6 +499,8 @@
   border: 0.1rem solid #ffffff;
 }
 
+
+
 /* 颐椿学社板块 */
 .sendGoods .wrapper .rightbox {
   display: flex;
@@ -502,25 +509,53 @@
   width: 90vw;
   height: 70vw;
   background-color: skyblue;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url(../images/yichunliuzi.png);
+}
+
+.sendGoods .rightbox .right-mid-box {
+  background-color: #1F5738;
+  width: 70vw;
+  height: 45vw;
+
 }
 
 /* 立于雪板块标题 */
 .leftbox h3 {
-  font-size: 1.7rem;
+  position: relative;
+  font-size: 2.5rem;
   color: white;
+}
+
+/* 立于学大板块企鹅 */
+.sendGoods .wrapper h3::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  left: -15%;
+  transform: translate(-50%, -50%);
+  width: 40vw;
+  height: 40vw;
+  background-image: url(../images/mascostspeak.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 /* 立于学板块中间 */
 .leftbox .leftboxmid {
   display: flex;
-  margin: auto 5vw;
+  z-index: 10;
+  margin: 5vw;
   flex-direction: column;
-  background-color: white;
+  background-color: #0E56B3;
   border-radius: 3vw;
 }
 
+
 .leftbox .leftboxmid ul {
   display: flex;
+  color: white;
   flex-wrap: wrap;
   padding: 3vw 0;
   justify-content: space-evenly;
@@ -566,7 +601,7 @@
   display: flex;
   gap: 4vw;
   justify-content: center;
-  padding: 4vw;
+  padding: 0 4vw 4vw 4vw;
   background-color: #126FE0;
   /* 与父级背景一致 */
 }
@@ -617,8 +652,8 @@
 }
 
 /* 图标样式（使用您指定的类名） */
-.iconfont {
-  font-size: 2rem;
+.leftboxbottom .iconfont {
+  font-size: 2.5rem;
   color: #126FE0;
   transition: transform 0.2s;
 }
@@ -673,7 +708,7 @@
 
 /* 手机号收集模块 */
 .phone-collect-module {
-  background: white;
+  background: phone-collect-module;
   padding: 0 2vw;
   border-radius: 0.8rem;
   /* 去掉阴影：删除 box-shadow 属性 */
