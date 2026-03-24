@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .bigbox {
+      position: relative;
+      width: 500px;
+      height: 500px;
+      background-color: pink;
+    }
+
+    .smallbox {
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      background-color: blue;
+      top: 50px;
+      right: 20%;
+      transition: all 2s;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="bigbox">
+    <div class="smallbox">
+    </div>
+  </div>
+
+  <script>
+    const bigbox = document.querySelector('.bigbox')
+    const smallbox = document.querySelector('.smallbox')
+    bigbox.addEventListener('click', () => {
+      bigbox.style.display = 'flex'
+    })
+  </script>
+</body>
+
+</html>

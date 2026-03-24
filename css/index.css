@@ -452,8 +452,274 @@
   }
 }
 
-.page2 {
-  width: 100vw;
-  height: 100vh;
-  background-color: pink;
+
+
+/* 领取好礼 */
+.sendGoods {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* 领取好礼版心 */
+.sendGoods .wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+/* 领取好礼立于学大板块 */
+.sendGoods .wrapper .leftbox {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 70vw;
+  background-color: #126FE0;
+  margin-bottom: 7vw;
+  padding-top: 6vw;
+}
+
+/* 立于学大板块边框为元素 */
+.sendGoods .wrapper .leftbox::after {
+  position: absolute;
+  pointer-events: none;
+  content: '';
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+  height: 96%;
+  border: 0.1rem solid #ffffff;
+}
+
+/* 颐椿学社板块 */
+.sendGoods .wrapper .rightbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 70vw;
+  background-color: skyblue;
+}
+
+/* 立于雪板块标题 */
+.leftbox h3 {
+  font-size: 1.7rem;
+  color: white;
+}
+
+/* 立于学板块中间 */
+.leftbox .leftboxmid {
+  display: flex;
+  margin: auto 5vw;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 3vw;
+}
+
+.leftbox .leftboxmid ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 3vw 0;
+  justify-content: space-evenly;
+}
+
+.leftbox .leftboxmid ul li {
+  width: 40%;
+  text-align: center;
+}
+
+.leftbox .leftboxmid ul li:nth-child(1) {
+  margin-left: 0;
+}
+
+.leftbox .leftboxmid ul li .iconfont {
+  text-align: center;
+  font-size: 1rem;
+}
+
+.leftbox .leftboxmid ul li .inner {
+  font-size: 1rem;
+}
+
+.leftbox .leftboxmid ul li .iconfont.icon-xuexi {
+  color: #7FAEFF;
+}
+
+.leftbox .leftboxmid ul li .iconfont.icon-zhekou {
+  color: #FFC378;
+}
+
+.leftbox .leftboxmid ul li .iconfont.icon-ziliaoshouce-xianxing {
+  color: #52C2FF;
+}
+
+.leftbox .leftboxmid ul li .iconfont.icon-position {
+  color: #0EDBBD;
+}
+
+/* 立于学模块下面两个按钮 */
+/* 按钮容器 */
+.leftboxbottom {
+  display: flex;
+  gap: 4vw;
+  justify-content: center;
+  padding: 4vw;
+  background-color: #126FE0;
+  /* 与父级背景一致 */
+}
+
+/* 通用按钮样式（同时作用于 button 和 a） */
+.action-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3vw 4vw;
+  background-color: white;
+  border: none;
+  border-radius: 3vw;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+  text-decoration: none;
+  /* 去除 a 标签的下划线 */
+  box-sizing: border-box;
+}
+
+/* 悬浮效果 */
+.action-btn:hover {
+  transform: translateY(-0.2rem);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+}
+
+/* 文字区域 */
+.btn-text {
+  text-align: left;
+}
+
+/* 大号文字 */
+.big-text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #126FE0;
+  line-height: 1.3;
+}
+
+/* 小号文字 */
+.small-text {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-top: 0.25rem;
+}
+
+/* 图标样式（使用您指定的类名） */
+.iconfont {
+  font-size: 2rem;
+  color: #126FE0;
+  transition: transform 0.2s;
+}
+
+.action-btn:hover .iconfont {
+  transform: scale(1.05);
+}
+
+/* 响应式调整：大屏幕时使用固定尺寸 */
+@media (min-width: 768px) {
+  .leftboxbottom {
+    gap: 2rem;
+    padding: 2rem;
+  }
+
+  .action-btn {
+    padding: 1rem 1.5rem;
+    border-radius: 1rem;
+  }
+
+  .big-text {
+    font-size: 1.4rem;
+  }
+
+  .small-text {
+    font-size: 0.9rem;
+  }
+
+  .iconfont {
+    font-size: 2.2rem;
+  }
+}
+
+/* 手机横屏时适当缩小 */
+@media (max-width: 480px) and (orientation: landscape) {
+  .action-btn {
+    padding: 2vw 3vw;
+  }
+
+  .big-text {
+    font-size: 1rem;
+  }
+
+  .small-text {
+    font-size: 0.7rem;
+  }
+
+  .iconfont {
+    font-size: 1.6rem;
+  }
+}
+
+/* 手机号收集模块 */
+.phone-collect-module {
+  background: white;
+  padding: 0 2vw;
+  border-radius: 0.8rem;
+  /* 去掉阴影：删除 box-shadow 属性 */
+}
+
+/* 输入框和按钮的容器 */
+.phone-input-group {
+  display: flex;
+  gap: 1vw;
+  align-items: center;
+}
+
+/* 手机号输入框 */
+.phone-input {
+  flex: 1;
+  padding: 1rem;
+  border: 0.1rem solid #ddd;
+  border-radius: 0.4rem;
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.phone-input:focus {
+  border-color: #3b82f6;
+}
+
+/* 提交按钮 */
+.phone-submit-btn {
+  padding: 1rem 2rem;
+  background: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.phone-submit-btn:hover {
+  background: #2563eb;
+}
+
+/* 提示消息区域 */
+.phone-message {
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  /* 14px 转换为 rem（假设 1rem = 16px） */
 }

@@ -84,7 +84,7 @@
           <li class="n2stli"></li>
         </ul>
       </li>
-      <li class="n1stli"><a href="#" class="n1sta">课程体系 <span class="menuopenen">Courses</span></a>
+      <li class="n1stli"><a href="#" class="n1sta">课程体系<span class="menuopenen">Courses</span></a>
         <!-- 2. 课程体系 Courses -->
         <ul class="menuopen2stul">
           <li class="n2stli"><a href="#" class="n2sta">晚托辅导<div class="n2stlien">After-school Program</div></a></li>
@@ -210,7 +210,88 @@
       </div>
     </div>
   </div>
-  <div class="page2"></div>
+
+
+
+  <div class="sendGoods">
+    <div class="wrapper">
+
+
+      <div class="leftbox">
+
+        <h3>立于学-领取专属好礼</h3>
+        <div class="leftboxmid">
+          <ul>
+            <li><span class="iconfont icon-xuexi"></span><span class="inner">一对一课程规划</span></li>
+            <li><span class="iconfont icon-zhekou"></span> <span class="inner">报课惊喜好折扣</span></li>
+            <li><span class="iconfont icon-ziliaoshouce-xianxing"></span><span class="inner">无锡备考资料包</span></li>
+            <li><span class="iconfont icon-position"></span><span class="inner">五校区参观机会</span></li>
+          </ul>
+          <div class="leftboxphonenum">
+            <!-- 手机号收集模块 -->
+            <div class="phone-collect-module">
+              <div class="phone-input-group">
+                <input type="tel" id="phoneInput" class="phone-input" placeholder="请输入手机号">
+                <button id="submitPhoneBtn" class="phone-submit-btn">提交</button>
+              </div>
+              <div id="phoneMessage" class="phone-message"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 立于学板块下方两个按钮 -->
+        <div class="leftboxbottom">
+          <!-- 在线咨询按钮（触发 AI 窗口） -->
+          <button class="action-btn consult-btn" id="consultBtn">
+            <div class="btn-text">
+              <div class="big-text">在线咨询</div>
+              <div class="small-text">获取更多优惠信息</div>
+            </div>
+            <span class="iconfont icon-kefu"></span>
+          </button>
+
+          <!-- 电话客服按钮（链接跳转） -->
+          <a href="#" class="action-btn phone-btn" id="phoneLink">
+            <div class="btn-text">
+              <div class="big-text">电话客服</div>
+              <div class="small-text">了解更多课程信息</div>
+            </div>
+            <span class="iconfont icon-dianhua"></span>
+          </a>
+        </div>
+      </div>
+
+
+      <div class="rightbox"></div>
+    </div>
+  </div>
+
+  <!-- AI 客服聊天窗口 -->
+  <div class="ai-chat-container">
+    <!-- 圆形按钮（无 emoji） -->
+    <button class="chat-toggle" id="chatToggle">客服</button>
+    <!-- 聊天窗口 -->
+    <div class="chat-window" id="chatWindow" style="display: none;">
+      <div class="chat-header">
+        <span>智能客服</span>
+        <button class="chat-close" id="closeChat">×</button>
+      </div>
+      <div class="chat-messages" id="chatMessages">
+        <div class="message bot">您好！很高兴为您服务。<br>
+          我们提供两大品牌课程：<br>
+          🔹 立于学教育（全科、托管）<br>
+          🔸 颐椿学社中老年大学（兴趣课程、健康社交）<br>
+          请问您想了解哪方面呢？</div>
+      </div>
+      <div class="chat-input-area">
+        <input type="text" id="userMessage" placeholder="输入你的问题...">
+        <button id="sendMessage">发送</button>
+      </div>
+    </div>
+  </div>
+
+
+
   <script src="./javascript/index.js"></script>
 </body>
 
