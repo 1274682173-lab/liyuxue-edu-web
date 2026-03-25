@@ -141,19 +141,19 @@
 
 /* 菜单内容 */
 .menuopen ul.menuopen1stul {
-  margin-top: 150px;
+  margin-top: 20vw;
 }
 
 .menuopen ul.menuopen1stul li.n1stli {
   display: flex;
   align-items: center;
-  padding: 2vw 3vw;
+  padding: 3vw;
   border-bottom: 1px dashed #0a3d807e;
 }
 
 .menuopen ul.menuopen1stul li.n1stli a.n1sta {
   font-weight: 750;
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: #0A3D80;
 }
 
@@ -196,12 +196,15 @@
 }
 
 .menuopen .contactus .contactusnow {
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 .menuopen .contactus .titlestrong {
-  font-size: 1rem;
   font-weight: 500;
+}
+
+.menuopen .contactus p {
+  font-size: 0.8rem;
 }
 
 
@@ -295,11 +298,11 @@
   display: flex;
   position: fixed;
   right: 50%;
-  bottom: 5%;
+  bottom: 3vw;
   transform: translateX(50%);
   background-color: #126FE0;
-  width: 12rem;
-  height: 3rem;
+  width: 40vw;
+  height: 9vw;
   border-radius: 5rem;
 }
 
@@ -335,13 +338,13 @@
 }
 
 .qrcodebox {
-  z-index: 120;
+  z-index: 110;
   display: flex;
   position: fixed;
-  width: 15vw;
-  height: 20vw;
+  width: 20vw;
+  height: 24vw;
   left: 50%;
-  bottom: 10%;
+  bottom: 12vw;
   transform: translateX(-50%);
   overflow: hidden;
 }

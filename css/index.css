@@ -63,16 +63,17 @@
   /* 从右侧开始 */
   animation: textReveal 4s ease infinite;
   color: #ffffff;
+  letter-spacing: 0.1em;
 }
 
 .banner ul li .innertextEng {
   display: inline-block;
-  font-size: 1rem;
+  font-size: 0.6rem;
   width: 50vw;
   z-index: 3;
   position: absolute;
-  left: 40%;
-  bottom: 24vh;
+  left: 0%;
+  bottom: -70%;
   /* 让字间距生效 */
   opacity: 0;
   letter-spacing: 20vw;
@@ -81,6 +82,8 @@
   /* 从右侧开始 */
   animation: textReveal 4s ease infinite;
   color: #ffffff;
+  letter-spacing: 0.1em;
+  word-spacing: 0.1em;
 }
 
 
@@ -123,24 +126,14 @@
   /* 背景图 */
   -webkit-mask: linear-gradient(to bottom,
       black 0%,
-      /* 顶部完全不透明 */
       black 10%,
-      /* 保持不透明到10% */
       black 90%,
-      /* 保持不透明到90% */
-      transparent 100%
-      /* 底部完全透明 */
-    ),
+      transparent 100%),
     linear-gradient(to right,
       transparent 0%,
-      /* 左侧边缘完全透明 */
       black 10%,
-      /* 10%位置开始完全不透明 */
       black 90%,
-      /* 保持不透明到90% */
-      transparent 100%
-      /* 右侧边缘完全透明 */
-    );
+      transparent 100%);
   mask: linear-gradient(to bottom,
       black 0%,
       black 10%,
@@ -152,14 +145,10 @@
       black 90%,
       transparent 100%);
   -webkit-mask-composite: intersect;
-  /* 对于WebKit浏览器，使用相交合成 */
   mask-composite: intersect;
-  /* 标准属性，两个遮罩区域取交集 */
 }
 
 
-
-/* 四个链接分别应用背景图 —— 按顺序 ../uploads/banner1.jpg 至 banner4.jpg */
 .banner ul li:nth-child(1) a {
   background-image: url('../uploads/banner1.jpg');
 }
@@ -461,6 +450,7 @@
   width: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 10vh;
 }
 
 /* 领取好礼版心 */
@@ -480,7 +470,6 @@
   flex-direction: column;
   align-items: center;
   width: 90vw;
-  height: 70vw;
   background-color: #126FE0;
   margin-bottom: 7vw;
   padding-top: 6vw;
@@ -515,10 +504,124 @@
 }
 
 .sendGoods .rightbox .right-mid-box {
-  background-color: #1F5738;
-  width: 70vw;
-  height: 45vw;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  background-color: #1f5738a8;
+  width: 90vw;
+  height: 70vw;
+}
 
+.sendGoods .right-mid-box h3 {
+  font-size: 10vw;
+  color: #F5E6D3;
+  text-shadow:
+    0.2rem 0 0 #1F5738,
+    -0.2rem 0 0 #1F5738,
+    0 0.2rem 0 #1F5738,
+    0 -0.2rem 0 #1F5738;
+}
+
+.right-mid-mid {
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+}
+
+.sendGoods .right-mid-box .right-mid-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.sendGoods .right-mid-box .right-mid-left ul {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(7.5rem, auto));
+  justify-content: center;
+  gap: 1vw 2vw;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.sendGoods .right-mid-box ul li {
+  text-align: center;
+  font-size: 1.3rem;
+  color: white;
+}
+
+.sendGoods .right-mid-box ul li span {
+  display: block;
+  padding: 1vw 0;
+  background-color: #1F5738;
+  width: 7.5rem;
+  border-radius: 0.5rem;
+}
+
+.right-mid-mid-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.right-mid-mid-right .phone-input {
+  flex: 1;
+  background-color: #F5E6D3;
+  border-radius: 3vw;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  border: none;
+}
+
+.right-mid-mid-right .phone-submit-btn {
+  flex: 1;
+  font-size: 1.5rem;
+  background: #1F5738;
+  padding: 0.2rem 0.1rem;
+}
+
+
+
+/* 颐椿AI留资两个按钮 */
+.right-mid-mid-right .consult-btn {
+  width: 95%;
+}
+
+.right-mid-mid-right .phone-collect-module {
+  padding: 0;
+}
+
+.right-mid-mid-right .action-btn {
+  background-color: #F5E6D3;
+  flex: 0.3;
+  padding: 3vw 2vw;
+}
+
+.right-mid-mid-right .iconfont {
+  font-size: 2rem;
+  color: #1F5738;
+}
+
+.right-mid-mid-right .small-text {
+  margin: 0 1rem;
+}
+
+.right-mid-mid-right .consult-btn .btn-text {
+  display: flex;
+  flex-direction: row;
+}
+
+.right-mid-mid-right .phone-btn {
+  width: 95%;
+}
+
+.right-mid-mid-right .phone-btn .btn-text {
+  display: flex;
+  flex-direction: row;
 }
 
 /* 立于雪板块标题 */
@@ -529,11 +632,12 @@
 }
 
 /* 立于学大板块企鹅 */
-.sendGoods .wrapper h3::before {
+.sendGoods .wrapper .leftbox h3::before {
   content: '';
   position: absolute;
-  z-index: 1;
-  left: -15%;
+  z-index: -10;
+  left: 40%;
+  top: -120%;
   transform: translate(-50%, -50%);
   width: 40vw;
   height: 40vw;
@@ -576,7 +680,7 @@
 }
 
 .leftbox .leftboxmid ul li .inner {
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .leftbox .leftboxmid ul li .iconfont.icon-xuexi {

@@ -33,25 +33,25 @@ window.addEventListener('scroll', function () {
   }
 
 
-  if (document.documentElement.scrollTop > viewportHeight * 0.4) {
+  if (document.documentElement.scrollTop > viewportHeight * 0.2) {
     //originbox出现
     originBox.style.opacity = '1'
     originBox.style.left = '0'
   }
   else {
-    //originbox出现
+    //originbox消失
     originBox.style.opacity = '0'
     originBox.style.left = '40%'
   }
 
 
-  if (document.documentElement.scrollTop > viewportHeight * 0.8) {
+  if (document.documentElement.scrollTop > viewportHeight * 0.5) {
     //originbox出现
     originText.style.opacity = '1'
     originText.style.left = '0'
   }
   else {
-    //originbox出现
+    //originbox消失
     originText.style.opacity = '0'
     originText.style.left = '40%'
   }
@@ -93,15 +93,15 @@ function startBanner() {
         // 等待一小段时间后重新开始轮播
         setTimeout(() => {
           bannerUl.style.transition = 'transform 0.5s ease'
-          startBanner()  // 重新开始轮播，从第二页开始
+          startBanner()
           bannerself()
         }, 3000)
 
-      }, 1000) // 
+      }, 1000)
 
 
     }
-  }, 4000) // 每1秒翻一页
+  }, 4000)
 }
 
 // 初始化启动
